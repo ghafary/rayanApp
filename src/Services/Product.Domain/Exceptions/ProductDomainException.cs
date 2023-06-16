@@ -1,4 +1,4 @@
-﻿namespace Product.Domain.Exceptions;
+﻿namespace ProductApp.Domain.Exceptions;
 
 /// <summary>
 /// Exception type for domain exceptions

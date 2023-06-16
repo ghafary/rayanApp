@@ -1,6 +1,6 @@
-﻿using Product.Application.Common.Models;
+﻿using ProductApp.Application.Common.Models;
 
-namespace Product.Application.Common.Interfaces;
+namespace ProductApp.Application.Common.Interfaces;
 
 public interface IIdentityService
 {

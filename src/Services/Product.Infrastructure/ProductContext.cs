@@ -3,25 +3,28 @@ using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.EntityFrameworkCore.Storage;
-using Product.Domain.SeedWork;
-using Product.Infrastructure.Common;
+using ProductApp.Application.Common.Interfaces;
+using ProductApp.Domain.AggregatesModel.ProductAggregate;
+using ProductApp.Infrastructure.Common;
+using ProductApp.Infrastructure.EntityConfigurations;
 
-namespace Product.Infrastructure;
+namespace ProductApp.Infrastructure;
 
-public class AppContext : DbContext, IUnitOfWork
+public class ProductContext : DbContext, IUnitOfWork
 {
     public const string DEFAULT_SCHEMA = "dbo";
+    public DbSet<Product> Products { get; set; }
 
     private readonly IMediator _mediator;
     private IDbContextTransaction _currentTransaction;
 
-    public AppContext(DbContextOptions<AppContext> options) : base(options) { }
+    public ProductContext(DbContextOptions<ProductContext> options) : base(options) { }
 
     public IDbContextTransaction GetCurrentTransaction() => _currentTransaction;
 
     public bool HasActiveTransaction => _currentTransaction != null;
 
-    public AppContext(DbContextOptions<AppContext> options, IMediator mediator) : base(options)
+    public ProductContext(DbContextOptions<ProductContext> options, IMediator mediator) : base(options)
     {
         _mediator = mediator ?? throw new ArgumentNullException(nameof(mediator));
 
@@ -31,7 +34,7 @@ public class AppContext : DbContext, IUnitOfWork
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-       // modelBuilder.ApplyConfiguration(new EntityTypeConfiguration());
+        modelBuilder.ApplyConfiguration(new ProductEntityTypeConfiguration());
     }
 
     public async Task<bool> SaveEntitiesAsync(CancellationToken cancellationToken = default)
@@ -102,14 +105,14 @@ public class AppContext : DbContext, IUnitOfWork
     }
 }
 
-public class OrderingContextDesignFactory : IDesignTimeDbContextFactory<AppContext>
+public class ProductContextDesignFactory : IDesignTimeDbContextFactory<ProductContext>
 {
-    public AppContext CreateDbContext(string[] args)
+    public ProductContext CreateDbContext(string[] args)
     {
-        var optionsBuilder = new DbContextOptionsBuilder<AppContext>()
-            .UseSqlServer("Server=.;Initial Catalog=Microsoft.eShopOnContainers.Services.OrderingDb;Integrated Security=true");
+        var optionsBuilder = new DbContextOptionsBuilder<ProductContext>()
+            .UseSqlServer("Server=.;Initial Catalog=ProductDb;Integrated Security=true");
 
-        return new AppContext(optionsBuilder.Options, new NoMediator());
+        return new ProductContext(optionsBuilder.Options, new NoMediator());
     }
 
     class NoMediator : IMediator

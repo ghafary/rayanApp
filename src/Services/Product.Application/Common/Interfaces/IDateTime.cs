@@ -1,4 +1,4 @@
-﻿namespace Product.Application.Common.Interfaces;
+﻿namespace ProductApp.Application.Common.Interfaces;
 
 public interface IDateTime
 {

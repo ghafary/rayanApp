@@ -2,9 +2,9 @@
 using FluentValidation;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
-using Product.Application.Common.Behaviours;
+using ProductApp.Application.Common.Behaviours;
 
-namespace Product.Application;
+namespace ProductApp.Application;
 
 public static class ConfigureServices
 {

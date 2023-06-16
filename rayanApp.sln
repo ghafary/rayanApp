@@ -9,13 +9,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{41
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Product", "Product", "{85BFEC2E-3E70-4ECF-872E-50D337FB8FF5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Product.Domain", "src\Services\Product.Domain\Product.Domain.csproj", "{0DD1644A-C0A2-4B4C-B716-7771827A2EEE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductApp.Domain", "src\Services\Product.Domain\ProductApp.Domain.csproj", "{0DD1644A-C0A2-4B4C-B716-7771827A2EEE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Product.Application", "src\Services\Product.Application\Product.Application.csproj", "{2633F4F9-2706-46CE-A5C7-907E2E958C26}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductApp.Application", "src\Services\Product.Application\ProductApp.Application.csproj", "{2633F4F9-2706-46CE-A5C7-907E2E958C26}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Product.Infrastructure", "src\Services\Product.Infrastructure\Product.Infrastructure.csproj", "{F4575A82-9389-446C-93E5-8B6CC3F7B215}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductApp.Infrastructure", "src\Services\Product.Infrastructure\ProductApp.Infrastructure.csproj", "{F4575A82-9389-446C-93E5-8B6CC3F7B215}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Product.Api", "src\Services\Products.Api\Product.Api.csproj", "{1CDE202B-ABF2-466E-A163-B430CDD00A98}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductApp.Api", "src\Services\Products.Api\ProductApp.Api.csproj", "{1CDE202B-ABF2-466E-A163-B430CDD00A98}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

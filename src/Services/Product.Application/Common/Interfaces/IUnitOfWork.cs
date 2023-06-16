@@ -1,4 +1,4 @@
-﻿namespace Product.Domain.SeedWork;
+﻿namespace ProductApp.Application.Common.Interfaces;
 
 public interface IUnitOfWork : IDisposable
 {

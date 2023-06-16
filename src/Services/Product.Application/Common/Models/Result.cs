@@ -1,4 +1,4 @@
-﻿namespace Product.Application.Common.Models;
+﻿namespace ProductApp.Application.Common.Models;
 
 public class Result
 {

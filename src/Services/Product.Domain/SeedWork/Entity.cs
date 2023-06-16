@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace Product.Domain.SeedWork;
+namespace ProductApp.Domain.SeedWork;
 
 public abstract class Entity
 {
