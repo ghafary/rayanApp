@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\haghighi\.nuget\packages\microsoft.applicationinsights.agent.intercept\0.17.0\build\\..\lib\native\x64\Microsoft.ApplicationInsights.Extensions.Intercept_x64.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\haghighi\.nuget\packages\microsoft.applicationinsights.agent.intercept\0.17.0\build\\..\lib\native\x86\Microsoft.ApplicationInsights.Extensions.Intercept_x86.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\haghighi\.nuget\packages\microsoft.applicationinsights.agent.intercept\0.17.0\build\\..\lib\native\x64\Microsoft.ApplicationInsights.Extensions.Intercept_x64.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\haghighi\.nuget\packages\microsoft.applicationinsights.agent.intercept\0.17.0\build\\..\lib\native\x86\Microsoft.ApplicationInsights.Extensions.Intercept_x86.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\haghighi\.nuget\packages\microsoft.applicationinsights.agent.intercept\0.17.0\build\\..\lib\native\x64\Microsoft.ApplicationInsights.Extensions.Intercept_x64.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Azure.Identity" Version="1.9.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.7" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.5.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.5.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.31.0" />
+  </ItemGroup>
+  
+</Project>

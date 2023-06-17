@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  productapp.api:
+    image: ${DOCKER_REGISTRY-}productappapi
+    build:
+      context: .
+      dockerfile: src/Services/Product/Products.Api/Dockerfile

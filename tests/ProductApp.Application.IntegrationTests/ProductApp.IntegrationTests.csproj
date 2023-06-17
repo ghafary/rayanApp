@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <RootNamespace>CleanArchitecture.Application.IntegrationTests</RootNamespace>
+        <AssemblyName>CleanArchitecture.Application.IntegrationTests</AssemblyName>
+
+        <IsPackable>false</IsPackable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <None Remove="appsettings.json" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="7.0.7" />
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.6.2" />
+        <PackageReference Include="FluentAssertions" Version="6.11.0" />
+        <PackageReference Include="Moq" Version="4.18.4" />
+        <PackageReference Include="Respawn" Version="6.0.0" />
+        <PackageReference Include="xunit.assert" Version="2.4.2" />
+        <PackageReference Include="xunit.extensibility.core" Version="2.4.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\src\Services\Product\Product.Application\ProductApp.Application.csproj" />
+      <ProjectReference Include="..\..\src\Services\Product\Product.Infrastructure\ProductApp.Infrastructure.csproj" />
+      <ProjectReference Include="..\..\src\Services\Product\Products.Api\ProductApp.Api.csproj" />
+    </ItemGroup>
+
+</Project>
